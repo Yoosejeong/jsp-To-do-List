@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="resources/login.css" type="text/css"></link>
+<title>sign</title>
+</head>
+<body>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="http://localhost:8080/YuSejeong_free/PersonServlet?cmd=join" method="post">
+      <h1>Create Account</h1>
+      <span>or use your email for registration</span>
+      <input type="text" name="id" autofocus required placeholder="id(공백없이 입력하세요)"></li><br>
+      <input type="password" name="passwd" autofocus required placeholder="passwd(공백없이 입력하세요)"></li><br>
+      <input type="text" name="username" autofocus required placeholder="username(공백없이 입력하세요)"></li><br>
+      <input type="text" name="mobile" autofocus required placeholder="mobile(***.****.****)"></li><br>
+      <input type="text" name="email" autofocus required placeholder="email(****@****.***)"></li>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form action="http://localhost:8080/YuSejeong_free/PersonServlet?cmd=login" method="post">
+      <h1>Sign in</h1>
+      <input type="text" name="id" placeholder="id" />
+      <input type="password" name="passwd" placeholder="Passwd" />
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const signUpButton = document.getElementById('signUp');
+  const signInButton = document.getElementById('signIn');
+  const container = document.getElementById('container');
+
+  signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel = "stylesheet" href = "resources/todoadd.css" type="text/css"></link>
+</head>
+
+
+<body>
+	<!-- 메뉴바 -->
+<div id="menu">
+    <a href="http://localhost:8080/YuSejeong_free/MyPageServlet?cmd=mypage" >마이페이지</a>
+    <a href="todoadd.html">투두리스트</a>
+</div>
+<div id="todoContainer">
+	  <div id = "add">
+        <h1>To-Do List</h1>
+        <form action="http://localhost:8080/YuSejeong_free/TodoListServlet?cmd=todoadd" method="post">
+            <input type="text" name="add" autofocus required placeholder="할 일을 추가하세요."><br><br>
+            <input type="submit" name="submit" value="추가하기">
+            <input type="reset" name="reset" value="다시 작성"><br><br><br><br>
+        </form>
+    </div>
+
+   <button onclick="location.href='http://localhost:8080/YuSejeong_free/TodoListServlet?cmd=todolist'">투두리스트 목록</button><br>
+   <button onclick="location.href='welcome.jsp'">메인 화면으로 이동</button>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,70 @@
+@charset "EUC-KR";
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+#menu {
+    background-color: rgb(255, 179, 217); /* 메뉴바 배경색 설정 */
+    padding: 10px;
+    text-align: center;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+
+#todoContainer {
+    width: 50%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.buttonContainer {
+    display: flex; /* 버튼을 가로로 나열하기 위해 flex 적용 */
+}
+
+.actionButton {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    margin-left: 5px; /* 각 버튼 사이의 간격을 조절 */
+}
+
+.deleteButton {
+    background-color: white;
+    color: black;
+}
+
+.completeButton {
+    background-color: white;
+    color: black;
+}
+
+.goBackButton {
+    background-color: rgb(255, 193, 224);
+    color: white;
+    border: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
